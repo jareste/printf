@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_uinteger.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/10 17:45:52 by jareste-          #+#    #+#             */
+/*   Updated: 2023/05/11 21:04:26 by jareste-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+#include "libft/libft.h"
+
+int	ft_print_uinteger(unsigned int n)
+{
+	char	c;
+	size_t	temp;
+	int		c_printed;
+
+	c = 0;
+	c_printed = 0;
+	temp = n;
+	while (++c_printed && (temp > 9))
+		temp = temp / 10;
+	if (n > 9)
+	{
+		temp = n % 10;
+		n = n / 10;
+		ft_print_decimal(n);
+	}
+	if (n < 9)
+		temp = n;
+	c = temp + '0';
+	ft_putchar_fd(c, 1);
+	return (c_printed);
+}
