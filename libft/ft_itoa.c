@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:17:05 by jareste-          #+#    #+#             */
-/*   Updated: 2023/05/08 22:22:11 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:20:31 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ static char	*special(int n)
 {
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (n == 0)
-		return (ft_strdup("0"));
 	return (0);
 }
 
@@ -48,7 +46,7 @@ char	*ft_itoa(int n)
 
 	temp = n;
 	i = 0;
-	if (n == -2147483648 || n == 0)
+	if (n == -2147483648)
 		return (special(n));
 	if (n < 0)
 		i++;

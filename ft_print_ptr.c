@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 19:45:20 by jareste-          #+#    #+#             */
-/*   Updated: 2023/05/09 21:51:09 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:54:03 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@
 int	ft_print_ptr(void *ptr)
 {
 	int	c_printed;
+	int	aux;
 
-	ft_print_string("0x");
+	if (ft_print_string("0x") == -1)
+		return (-1);
 	c_printed = 2;
-	c_printed = ft_print_hex((unsigned long long)ptr, 'x', 0);
+	aux = ft_print_hex((unsigned long)ptr, 'x', 0);
+	if (aux == -1)
+		return (-1);
+	c_printed += aux;
 	return (c_printed);
 }

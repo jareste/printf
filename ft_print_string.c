@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:22:49 by jareste-          #+#    #+#             */
-/*   Updated: 2023/05/11 21:08:34 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/05/15 15:50:04 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	ft_print_string(char *str)
 
 	i = 0;
 	if (str == NULL)
+		str = "(null)";
+	while (str[i])
 	{
-		ft_putstr_fd("(null)", 1);
-		return (6);
+		if (ft_print_char_fd(str[i], 1) == -1)
+			return (-1);
+		i++;
 	}
-	ft_putstr_fd(str, 1);
 	i = ft_strlen(str);
 	return (i);
 }

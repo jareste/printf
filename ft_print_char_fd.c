@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 00:37:42 by jareste-          #+#    #+#             */
-/*   Updated: 2023/05/15 14:20:03 by jareste-         ###   ########.fr       */
+/*   Created: 2023/05/15 14:20:18 by jareste-          #+#    #+#             */
+/*   Updated: 2023/05/15 15:26:31 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_print_char_fd(int c, int fd)
 {
-	write(fd, &c, sizeof(c));
+	if (write(fd, &c, 1) != 1)
+		return (-1);
+	return (1);
 }

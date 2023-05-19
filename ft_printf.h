@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 12:46:25 by jareste-          #+#    #+#             */
-/*   Updated: 2023/05/11 21:03:45 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:55:14 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_print_uinteger(unsigned int n);
 int	ft_print_string(char *str);
 int	ft_printf(const char *s, ...);
 int	ft_print_ptr(void *ptr);
-int	ft_print_hex(unsigned int n, char format, int c_printed);
+int	ft_print_hex(unsigned long int n, char format, int c_printed);
+int	ft_print_char_fd(int c, int fd);
 
 #endif

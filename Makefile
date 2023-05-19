@@ -6,7 +6,7 @@
 #    By: jareste- <jareste-@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/10 14:07:30 by jareste-          #+#    #+#              #
-#    Updated: 2023/05/12 01:38:34 by jareste-         ###   ########.fr        #
+#    Updated: 2023/05/15 14:55:07 by jareste-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,13 @@ NAME = libftprintf.a
 SRC_PATH = .
 LIBFT_PATH = ./libft
 
-SRCS := ft_printf.c \
+SRCS = ft_printf.c \
 	ft_print_ptr.c \
 	ft_print_uinteger.c \
 	ft_print_decimal.c \
 	ft_print_hex.c \
-	ft_print_string.c
+	ft_print_string.c \
+	ft_print_char_fd.c
 
 SRCS += $(addprefix $(LIBFT_PATH)/, ft_atoi.c \
        	ft_isdigit.c \
